@@ -31,6 +31,6 @@ For reference, `door1` is the one at the front of the UPL (that faces into the l
 
 ### Discord Bot
 
-Queries the endpoint and, if both doors are open, sets the name of the channel to `upl-doors-open`. If either door is closed, it sets the name to `upl-doors-closed`. It updates every minute.
+[In here.](./discord-bot/) Queries the endpoint and, if both doors are open, sets the name of the channel to `upl-doors-open`. If either door is closed, it sets the name to `upl-doors-closed`. It updates every minute.
 
 There's a weird issue where sometimes it'll skip updating the channel name for a bit. Not sure if it's a caching issue...?

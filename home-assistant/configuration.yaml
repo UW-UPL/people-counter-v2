@@ -1,0 +1,43 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+rest_command:
+  door1_opened:
+    url: "https://doors.amoses.dev/door1/open"
+    method: POST
+    headers:
+      content-type: "application/json"
+    payload: '{"door": "door1", "state": "open"}'
+    content_type: 'application/json; charset=utf-8'
+
+  door1_closed:
+    url: "https://doors.amoses.dev/door1/close"
+    method: POST
+    headers:
+      content-type: "application/json"
+    payload: '{"door": "door1", "state": "closed"}'
+    content_type: 'application/json; charset=utf-8'
+
+  door2_opened:
+    url: "https://doors.amoses.dev/door2/open"
+    method: POST
+    headers:
+      content-type: "application/json"
+    payload: '{"door": "door2", "state": "open"}'
+    content_type: 'application/json; charset=utf-8'
+
+  door2_closed:
+    url: "https://doors.amoses.dev/door2/close"
+    method: POST
+    headers:
+      content-type: "application/json"
+    payload: '{"door": "door2", "state": "closed"}'
+    content_type: 'application/json; charset=utf-8'
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
